@@ -9,13 +9,10 @@ connection.onopen = () => {
 connection.onerror = () => {
   console.log('failed to connect from the frontend');
 };
-
- //pushing information down to the client
 connection.onmessage = (event) => {
   console.log('received message', event.data);
 };
-
 document.getElementById('editor').addEventListener('input', (event)=>{
   let text = document.getElementById('editor').innerText;
   connection.send(text);
-})
+});
