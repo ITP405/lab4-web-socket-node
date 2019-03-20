@@ -2,8 +2,8 @@
 
 
 // let connection = new WebSocket("ws://web-socket-node-jaejun.herokuapp.com");
-var HOST = location.origin.replace(/^http/, 'ws')
-var ws = new WebSocket(HOST);
+// var HOST = location.origin.replace(/^http/, 'ws')
+let connection = new WebSocket("//web-socket-node-jaejun.herokuapp.com");
 connection.onopen = () => {
   console.log('connected from the frotend');
    connection.send('hello');
