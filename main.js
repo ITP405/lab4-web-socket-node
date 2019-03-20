@@ -1,6 +1,9 @@
 // creating a connection to the websock server from browser
-let connection = new WebSocket("ws://web-socket-node-jaejun.herokuapp.com");
 
+
+// let connection = new WebSocket("ws://web-socket-node-jaejun.herokuapp.com");
+var HOST = location.origin.replace(/^http/, 'ws')
+var ws = new WebSocket(HOST);
 connection.onopen = () => {
   console.log('connected from the frotend');
    connection.send('hello');
