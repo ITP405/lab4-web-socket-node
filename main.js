@@ -1,5 +1,5 @@
 
-let connection = new WebSocket("ws://web-socket-node-jaejun.herokuapp.com");
+let connection = new WebSocket("wss://web-socket-node-jaejun.herokuapp.com");
 connection.onopen = () => {
   console.log('connected from the frotend');
    // connection.send('hello');
